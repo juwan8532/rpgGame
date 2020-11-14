@@ -1,4 +1,4 @@
-// window.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
 
     //**** NEED TO MAKE SO OFFENSE AND DEFENSE PLAY ROLE
 
@@ -55,7 +55,6 @@
             this.offense = 5;
             this.abilityPower = 0;
             this.abilities = this.setType
-            this.basicAttack = 7 + this.offense;
         }
 
         setType(){
@@ -65,6 +64,7 @@
                 this.abilityPower += 10;
                 this.offense += 2;
                 this.defense += 4;
+                this.basicAttack = 7 + this.offense;
             }
 
             if(this.type == 'knight'){
@@ -72,6 +72,7 @@
                 this.abilityPower += 2;
                 this.offense += 7;
                 this.defense += 7;
+                this.basicAttack = 7 + this.offense;
             }
 
             if(this.type == 'elf'){
@@ -79,6 +80,7 @@
                 this.abilityPower += 7;
                 this.offense += 3;
                 this.defense += 3;
+                this.basicAttack = 7 + this.offense;
             }
 
             if(this.type == 'rogue'){
@@ -86,6 +88,7 @@
                 this.abilityPower += 5;
                 this.offense += 5;
                 this.defense += 6;
+                this.basicAttack = 7 + this.offense;
             }
         }
 
@@ -93,35 +96,45 @@
 
     const loginButton = document.getElementById('loginButton');
     const createButton = document.getElementById('createButton');
-    const userName = document.getElementById('userName');
-    const userPassword = document.getElementById('userPassword');
     const isValidDiv = document.getElementById('isValid');
     const div = document.createElement('div');
-    const badWords = '/-*=+!@#$%^&()"][}{`~'
 
-    const isValid = (userName, userPass) =>{
-        //if not valid make text pop up in red
-        if(userName.length < 7){
-            isValidDiv.innerHTML = "User Name needs to be at least 7 characters."
-        }
+    //---------------this needs to check if login is correct ----------------
 
-        if(badWords.includes(userName.value)){
+    // const isValid = () =>{
+    //     const userName = document.getElementById('userName');
+    //     const userPassword = document.getElementById('userPassword');
+    //     const badWords = '/-*=+!@#$%^&()"][}{~'
+    //     //if not valid make text pop up in red
+    //     if(userName.value.length < 7){
+    //         isValidDiv.innerHTML = "User Name needs to be at least 7 characters."
+    //     }
+    //     if(userPassword.value.length < 7){
+    //         const newDiv = isValidDiv.appendChild(div)
+    //         newDiv.innerHTML = "Password needs to be at least 7 characters."
+    //     }
 
-            const newDiv = isValidDiv.appendChild(div)
-            newDiv.innerHTML = "Enter a valid user name."
-        }
-    }
+        // if(userName.value.includes(badWords)){
+        //     console.log('in the bad word')
+        //     const newDiv = isValidDiv.appendChild(div)
+        //     newDiv.innerHTML = "Enter a valid user name."
+        // }
+    // }
 
     loginButton.addEventListener('click', (event) =>{
-        preventDefault();
-        isValid();
+        event.preventDefault();
+        // isValid();
+        // if(if isValid passes we launch game){
+
+        // }
     })
 
-    createButton.addEventListener('click', (event) => {
-        //taken to the crate player screen
+    createButton.addEventListener('click', (event) =>{
+        event.preventDefault();
+        location.href = "./createPlayer.html"
     })
 
     let juwan = new Player('juwan', 'mage');
     juwan.setType();
     console.log(juwan)
-// })
+})

@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <script type="text/javascript" src="./index.js"></script>
+  <script type="text/javascript" src="./createPlayer.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./index.css">
   <title>RPG Game</title>
 </head>
 <body>
-  <h1 id ="title">Welcome to "RPG"</h1>
+  <h1 id ="title">Welcome to "RPG</h1>
   <form id = "form">
-    <h2 id ="login">Login</h2>
-    <input type="text" id="userName" placeholder="Enter Username">
-    <input type="password" id="userPassword" placeholder="Enter Password">
+    <h2 id ="login">Create an account</h2>
+    <input type="text" id="createName" placeholder="Enter Username">
+    <input type="password" id="createPassword" placeholder="Enter Password">
+    <input type="password" id="recreatePassword" placeholder="Confirm Password">
     <div id="isValid"></div>
+    <div id="isValid2"></div>
     <button id ="loginButton">Log In</button>
     <button id ="createButton">Create New Account</button>
   </form>
