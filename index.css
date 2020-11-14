@@ -1,22 +1,48 @@
+* {
+	Font-Family: Sans-Serif;
+}
 
-#title{
-    width: 500px;
+
+body {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+ #title{
+    width: 300px;
     margin: auto;
 }
 
 #login{
-    margin:auto;
+    text-align: center;
+    font-size: 40px;
+	margin: 0 0 50px 0;
+	color:rgb(0, 0, 0);
+	font-weight: bold;
 }
 
-#loginButton{
+/* #loginButton{
     width: 150px;
     margin: auto;
-    /* -------------cant make button center ---------*/
-}
+} */
 
-#createButton{
+/* #createButton{
     width: 150px;
     margin: auto;
+} */
+
+button {
+	border: none;
+	outline: none;
+	padding: 15px;
+	background: black;
+	color: white;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgb(0, 0, 0);
+	margin-top: 40px;
+	font-size: 16px;
+	font-weight: bold;
 }
 
 form {
@@ -24,7 +50,15 @@ form {
 	flex-direction: column;
 	width: 400px;
 	margin: 60px auto;
-	background: rgb(94, 157, 196);
+	background: rgb(206, 190, 166);
 	padding: 50px;
+	border-radius: 10px;
+}
+
+input {
+	outline: none;
+	border: none;
+	padding: 10px;
+	margin-bottom: 15px;
 	border-radius: 10px;
 }

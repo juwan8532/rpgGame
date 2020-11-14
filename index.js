@@ -61,28 +61,28 @@ window.addEventListener('DOMContentLoaded', (event) => {
         setType(){
 
             if(this.type == 'mage'){
-                this.abilities = ['fireBlast', 'arcaneBlast'];
+                this.abilities = ['fireBlast', 'arcaneBlast', 'basic'];
                 this.abilityPower += 10;
                 this.offense += 2;
                 this.defense += 4;
             }
 
             if(this.type == 'knight'){
-                this.abilities = ['strike', 'stab'];
+                this.abilities = ['strike', 'stab', 'basic'];
                 this.abilityPower += 2;
                 this.offense += 7;
                 this.defense += 7;
             }
 
             if(this.type == 'elf'){
-                this.abilities = ['heal', 'naturesRevenge'];
+                this.abilities = ['heal', 'naturesRevenge', 'basic'];
                 this.abilityPower += 7;
                 this.offense += 3;
                 this.defense += 3;
             }
 
             if(this.type == 'rogue'){
-                this.abilities = ['swiftStrike', 'counterStrike'];
+                this.abilities = ['swiftStrike', 'counterStrike', 'basic'];
                 this.abilityPower += 5;
                 this.offense += 5;
                 this.defense += 6;
@@ -90,6 +90,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
 
     }
+
+    const loginButton = document.getElementById('loginButton');
+    const createButton = document.getElementById('createButton');
+    const userName = document.getElementById('userName');
+    const userPassword = document.getElementById('userPassword');
+    const isValid = () =>{
+
+    }
+    loginButton.addEventListener('click', (event) =>{
+        //if passes login we launch game
+    })
+
+    createButton.addEventListener('click', (event) => {
+        //taken to the crate player screen
+    })
 
     let juwan = new Player('juwan', 'mage')
     juwan.setType();
