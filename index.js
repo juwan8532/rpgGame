@@ -1,4 +1,4 @@
-// window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', (event) => {
 
     //**** NEED TO MAKE SO OFFENSE AND DEFENSE PLAY ROLE
 
@@ -40,26 +40,58 @@
                 this.basicAttack = 3 + this.offense;
                 this.experience = this.lvl * 7
             }
+
         }//end of assignPower()
     }
 
     class Player extends Character{
-        constructor(name){  //assign player the stats
-            super(name);
+        constructor(name, type){  //assign player the stats
+            super(name, type);
             this.lvl = 3;
+            this.type = type;
             this.health = 125;
-            this.abilities = this.assignPower();
             this.experience = 0;
             this.defense = 5;
             this.offense = 5;
+            this.abilityPower = 0;
+            this.abilities = this.setType
             this.basicAttack = 7 + this.offense;
         }
+
+        setType(){
+
+            if(this.type == 'mage'){
+                this.abilities = ['fireBlast', 'arcaneBlast'];
+                this.abilityPower += 10;
+                this.offense += 2;
+                this.defense += 4;
+            }
+
+            if(this.type == 'knight'){
+                this.abilities = ['strike', 'stab'];
+                this.abilityPower += 2;
+                this.offense += 7;
+                this.defense += 7;
+            }
+
+            if(this.type == 'elf'){
+                this.abilities = ['heal', 'naturesRevenge'];
+                this.abilityPower += 7;
+                this.offense += 3;
+                this.defense += 3;
+            }
+
+            if(this.type == 'rogue'){
+                this.abilities = ['swiftStrike', 'counterStrike'];
+                this.abilityPower += 5;
+                this.offense += 5;
+                this.defense += 6;
+            }
+        }
+
     }
 
-    // let juwan = new Player('juwan')
-    // console.log(juwan)
-
-    // let beast = new Character('ragnar', 'beast', '3')
-    // beast.assignPower(this.type)
-    // console.log(beast)
-// })
+    let juwan = new Player('juwan', 'mage')
+    juwan.setType();
+    console.log(juwan)
+})

@@ -1,0 +1,30 @@
+
+#title{
+    width: 500px;
+    margin: auto;
+}
+
+#login{
+    margin:auto;
+}
+
+#loginButton{
+    width: 150px;
+    margin: auto;
+    /* -------------cant make button center ---------*/
+}
+
+#createButton{
+    width: 150px;
+    margin: auto;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	margin: 60px auto;
+	background: rgb(94, 157, 196);
+	padding: 50px;
+	border-radius: 10px;
+}
