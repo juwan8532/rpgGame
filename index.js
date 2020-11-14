@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+// window.addEventListener('DOMContentLoaded', (event) => {
 
     //**** NEED TO MAKE SO OFFENSE AND DEFENSE PLAY ROLE
 
@@ -95,18 +95,33 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const createButton = document.getElementById('createButton');
     const userName = document.getElementById('userName');
     const userPassword = document.getElementById('userPassword');
-    const isValid = () =>{
+    const isValidDiv = document.getElementById('isValid');
+    const div = document.createElement('div');
+    const badWords = '/-*=+!@#$%^&()"][}{`~'
 
+    const isValid = (userName, userPass) =>{
+        //if not valid make text pop up in red
+        if(userName.length < 7){
+            isValidDiv.innerHTML = "User Name needs to be at least 7 characters."
+        }
+
+        if(badWords.includes(userName.value)){
+
+            const newDiv = isValidDiv.appendChild(div)
+            newDiv.innerHTML = "Enter a valid user name."
+        }
     }
+
     loginButton.addEventListener('click', (event) =>{
-        //if passes login we launch game
+        preventDefault();
+        isValid();
     })
 
     createButton.addEventListener('click', (event) => {
         //taken to the crate player screen
     })
 
-    let juwan = new Player('juwan', 'mage')
+    let juwan = new Player('juwan', 'mage');
     juwan.setType();
     console.log(juwan)
-})
+// })
