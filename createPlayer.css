@@ -1,0 +1,114 @@
+* {
+	Font-Family: Sans-Serif;
+}
+
+
+body {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+ #title{
+    width: 300px;
+    margin: auto;
+}
+
+#login{
+    text-align: center;
+    font-size: 40px;
+	margin: 0 0 50px 0;
+	color:rgb(0, 0, 0);
+	font-weight: bold;
+}
+
+/* #loginButton{
+    width: 150px;
+    margin: auto;
+} */
+
+/* #createButton{
+    width: 150px;
+    margin: auto;
+} */
+
+button {
+	border: none;
+	outline: none;
+	padding: 15px;
+	background: black;
+	color: white;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgb(0, 0, 0);
+	margin-top: 40px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	margin: 60px auto;
+	background: rgb(206, 190, 166);
+	padding: 50px;
+	border-radius: 10px;
+}
+
+input {
+	outline: none;
+	border: none;
+	padding: 10px;
+	margin-bottom: 15px;
+	border-radius: 10px;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+/* .column {
+	overflow-wrap: break-word;
+	float: left;
+	width: 25%;
+	height: 400px;
+	margin:2%;
+  	background:white;
+	padding: 5px;
+	border:1px solid #d6d6d6;
+	box-shadow:0 2px 3px 0px
+	 rgba(0,0,0,0.25);
+  	border-radius:3px;
+  	transition:.2s all;
+  } */
+/*
+.p .column{
+	float: left;
+	padding: 5px;
+	border:1px solid #d6d6d6;
+	margin: 2%;
+	width: 25%;
+} */
+  /* Clear floats after image containers */
+  /* .row::after {
+	content: "";
+	clear: both;
+	display: table;
+  } */
+
+/* .row{
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.row:hover .column{
+	filter:blur(3px);
+	opacity:.5;
+	transform: scale(.98);
+	box-shadow:none;
+}
+
+.row:hover .column:hover{
+	transform:scale(1);
+	filter:blur(0px);
+	opacity:1;
+	box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
+  } */
