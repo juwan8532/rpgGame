@@ -28,7 +28,9 @@ h1 {
     letter-spacing: .3em;
     white-space:nowrap;
   }
-
+.confirmButton{
+  display: none;
+}
   span {
     color: #000;
     font-family: 'Caesar Dressing', cursive;
