@@ -1,5 +1,5 @@
 
-import { Player } from './classes.js';
+import { Player } from '../classes.js';
 document.addEventListener('DOMContentLoaded', () => {
 
 
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ------------------- need to pick a hero name-----------------------------------------
             let choice = event.target.id;
             let hero = new Player('NotChosenYet', choice)
-            location.href = "./index.html"
+            location.href = "../index.html"
         })
     })
 

@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     createButton.addEventListener('click', (event) =>{
         event.preventDefault();
-        location.href = "./createPlayer.html"
+        location.href = "../createPlayer/createPlayer.html"
     })
 
 })

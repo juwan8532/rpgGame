@@ -49,12 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
         let result = isValid();
 
         if(result){
-            location.href = "./playerSelection.html"
+            location.href = "../playerSelection/playerSelection.html"
         }//if we pass all the requirements to make an account we go to selection page
     })
 
     loginButton.addEventListener('click', (event) =>{
         event.preventDefault();
-        location.href = "./index.html"
+        location.href = "../index/index.html"
     })
 })
