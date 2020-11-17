@@ -1,4 +1,7 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
+    import { Character, Player } from './index.js';
 
     const rogue = document.getElementById('rogue');
     const knight = document.getElementById('knight');
@@ -45,8 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     confirmButtons.forEach((button) => {
+
         button.addEventListener('click', (event) => {
-            alert(event.target.id);
+            //grabbing the choice that they selected and confirmed
+            let choice = event.target.id
+            choices.push(choice.toLowerCase());
         })
     })
+
 })
+
+// console.log(hero)

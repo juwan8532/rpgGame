@@ -134,7 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
         location.href = "./createPlayer.html"
     })
 
-    let juwan = new Player('juwan', 'mage');
-    juwan.setType();
-    console.log(juwan)
 })
+
+export { Character, Player };
