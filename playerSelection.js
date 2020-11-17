@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const knight = document.getElementById('knight');
     const mage = document.getElementById('mage');
     const elf = document.getElementById('elf');
-    let rogueConfirm = document.getElementById('1')
+    let rogueConfirm = document.getElementById('Rogue');
+    let mageConfirm = document.getElementById('Mage');
+    let knightConfirm = document.getElementById('Knight');
+    let elfConfirm = document.getElementById('Elf');
 
-    let mageConfirm = document.getElementById('2')
-    let knightConfirm = document.getElementById('3')
-    let elfConfirm = document.getElementById('4')
-
+    let confirmButtons = document.querySelectorAll('.confirmButton');
     // const rogueImg = document.createElement('img');
     // const elfImg = document.createElement('img');
     // const knightImg = document.createElement('img');
@@ -44,19 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
         knightConfirm.style.display = 'none';
     })
 
-    rogueConfirm.addEventListener('click', (event) => {
-
-    })
-
-    mageConfirm.addEventListener('click', (event) => {
-
-    })
-
-    knightConfirm.addEventListener('click', (event) => {
-
-    })
-
-    elfConfirm.addEventListener('click', (event) => {
-
+    confirmButtons.forEach((button) => {
+        button.addEventListener('click', (event) => {
+            alert(event.target.id);
+        })
     })
 })
