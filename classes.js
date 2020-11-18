@@ -41,7 +41,7 @@ export class Character {
 }
 
 export class Player extends Character{
-    constructor(name, type){  //assign player the stats
+    constructor(name){  //assign player the stats
         super(name, type);
         this.lvl = 3;
         this.type = type;

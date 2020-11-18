@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isValidDiv = document.getElementById('isValid');
     const div = document.createElement('div');
 
-    //---------------this needs to check if login is correct ----------------
+    //*---------------this needs to check if login is correct ----------------
 
     // const isValid = () =>{
     //     const userName = document.getElementById('userName');

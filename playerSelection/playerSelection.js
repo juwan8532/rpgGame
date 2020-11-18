@@ -1,5 +1,8 @@
-
 import { Player } from '../classes.js';
+
+let hero = new Player;
+// console.log(hero)
+
 document.addEventListener('DOMContentLoaded', () => {
 
 
@@ -51,13 +54,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         button.addEventListener('click', (event) => {
             //grabbing the choice that they selected and confirmed
-// ------------------- need to pick a hero name-----------------------------------------
-            let choice = event.target.id;
-            let hero = new Player('NotChosenYet', choice)
-            location.href = "../index.html"
+//* ------------------- need to pick a hero name-----------------------------------------
+            // export default hero = new Player('NotChosenYet', choice);
+            // export default hero;
+            // location.href = "../intro/intro.html";
+            pick(event.target.id)
         })
     })
+    function pick(thePick){
+        hero.setType = thePick;
+        console.log(hero)
+        // location.href = "../intro/intro.html";
+    }
+
 
 })
-
-// console.log(hero)
+console.log(hero)
+export default hero;
