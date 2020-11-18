@@ -2,7 +2,7 @@ import { Player } from '../classes.js';
 
 let hero = new Player;
 
-document.addEventListener('DOMContentLoaded', () => {
+// document.addEventListener('DOMContentLoaded', () => {
 
 
     const rogue = document.getElementById('rogue');
@@ -60,14 +60,18 @@ document.addEventListener('DOMContentLoaded', () => {
             pick(event.target.id)
         })
     })
-    function pick(thePick){
+    function pick (thePick){
         hero.setType(thePick)
         console.log(hero)
     }
 
 
-})
+// })
 export default hero;
-// setTimeout(() => {
-//     location.href = "../intro/intro.html"
-// }, 0)
+
+setInterval(function(){
+    if(hero.type !== undefined){
+        location.href = "../intro/intro.html"
+        console.log('in loc')
+    }
+}, 200)
