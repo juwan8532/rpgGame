@@ -42,9 +42,8 @@ export class Character {
 
 export class Player extends Character{
     constructor(name){  //assign player the stats
-        super(name, type);
+        super(name);
         this.lvl = 3;
-        this.type = type;
         this.health = 125;
         this.experience = 0;
         this.defense = 5;
@@ -53,9 +52,10 @@ export class Player extends Character{
         this.abilities = this.setType
     }
 
-    setType(){
+    setType(type){
 
-        if(this.type == 'mage'){
+        if(type == 'Mage'){
+            this.type ='Mage'
             this.abilities = ['fireBlast', 'arcaneBlast', 'basic'];
             this.abilityPower += 10;
             this.offense += 2;
@@ -63,7 +63,8 @@ export class Player extends Character{
             this.basicAttack = 7 + this.offense;
         }
 
-        if(this.type == 'knight'){
+        if(type == 'Knight'){
+            this.type = 'Knight'
             this.abilities = ['strike', 'stab', 'basic'];
             this.abilityPower += 2;
             this.offense += 7;
@@ -71,7 +72,8 @@ export class Player extends Character{
             this.basicAttack = 7 + this.offense;
         }
 
-        if(this.type == 'elf'){
+        if(type == 'Elf'){
+            this.type = 'Elf'
             this.abilities = ['heal', 'naturesRevenge', 'basic'];
             this.abilityPower += 7;
             this.offense += 3;
@@ -79,7 +81,8 @@ export class Player extends Character{
             this.basicAttack = 7 + this.offense;
         }
 
-        if(this.type == 'rogue'){
+        if(type == 'Rogue'){
+            this.type = 'Rogue'
             this.abilities = ['swiftStrike', 'counterStrike', 'basic'];
             this.abilityPower += 5;
             this.offense += 5;

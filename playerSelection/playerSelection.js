@@ -1,7 +1,6 @@
 import { Player } from '../classes.js';
 
 let hero = new Player;
-// console.log(hero)
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -62,12 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
     function pick(thePick){
-        hero.setType = thePick;
+        hero.setType(thePick)
         console.log(hero)
-        // location.href = "../intro/intro.html";
     }
 
 
 })
-console.log(hero)
 export default hero;
+// setTimeout(() => {
+//     location.href = "../intro/intro.html"
+// }, 0)
