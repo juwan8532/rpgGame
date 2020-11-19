@@ -25,7 +25,6 @@ let battle = (attacker, defender, ability) => {
 
 //?if the attacker is a player
     if(attacker instanceof Player){
-        let critical = false;
         if(Math.floor((Math.random() * 100) + 1) <= attacker.luck){
             damage = ability * attacker.intellect * 1.5;
             defender.health -= damage;
