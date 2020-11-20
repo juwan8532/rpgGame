@@ -51,21 +51,38 @@ let battle = (attacker, defender, ability) => {
 let lootDrop = (gameItems, lvl) => {
 
     console.log(gameItems);
+    let drops = [];
 
     //! this will look at every ele in gameItems
-    gameItems.forEach((ele) => {
+    for(let ele in gameItems){
 
-        if(gameItems.hasOwnProperty(ele)){
-            // console.log(ele);
-            // if(ele['rarity'] == 'common' )common.push(ele);
-            // if(ele['rarity'] == 'uncommon') uncommon.push(ele);
-            // if(ele['rarity'] == 'rare') rare.push(ele);
-            // if(ele['rarity'] == 'epic') epic.push(ele);
-            // if(ele['rarity'] == 'legendary') legendary.push(ele);
-        }
-    })
+        if(lvl <= 15 && (gameItems[ele]['rarity'] === 'common'
+                     || gameItems[ele]['rarity'] === 'uncommon')){
 
-}
+            drops.push(gameItems[ele])
+        } //? common and uncommon if()
+
+        else if(lvl <= 30 && (gameItems[ele]['rarity'] === 'uncommon'
+                     || gameItems[ele]['rarity'] === 'rare')){
+
+            drops.push(gameItems[ele])
+        } //? uncommon and rare if()
+
+        else if(lvl <= 45 && (gameItems[ele]['rarity'] === 'rare'
+                     || gameItems[ele]['rarity'] === 'epic')){
+
+            drops.push(gameItems[ele])
+        } //?rare and epic if()
+
+        else if(lvl <= 60 && (gameItems[ele]['rarity'] === 'epic'
+                     || gameItems[ele]['rarity'] === 'legendary')){
+
+            drops.push(gameItems[ele])
+        } //?epic and legendary if()
+    }
+
+    console.log(drops);
+} //! end of lootDrop()
 
 lootDrop(gameItems, 3)
 // console.log(battle(monster, hero, monster.abilities.bite))

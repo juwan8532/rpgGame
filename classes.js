@@ -117,54 +117,48 @@ export class Player extends Character{
     }
 }
 
-export let gameItems = [
+export let gameItems = {
 
-      {
-        name:'blue_nova',
+    blue_nova: {
         intellect: 5,
         luck: 2,
         toughness:2,
         rarity:'common'
     },
 
-    {
-        name:'goblins_glaive',
+    goblins_glaive:{
         intellect: 1,
         luck: 3,
         toughness:4,
         rarity:'common'
     },
 
-    {
-        name:'spectres_hammer',
+    spectres_hammer:{
         intellect: 4,
         luck: 2,
         toughness:1,
         rarity:'common'
     },
 
-    {
-        name:'soul_sword',
+    soul_sword:{
         intellect: 5,
         luck: 5,
         toughness:3,
         rarity:'uncommon'
     },
 
-    {
-        name:'warhammer',
+    warhammer: {
         intellect: 1,
         luck: 2,
         toughness:10,
         rarity:'uncommon'
     },
 
-    {
-        name:'golden_cup',
+    golden_cup: {
         intellect: 1,
         luck: 10,
         toughness:2,
         rarity:'uncommon'
     }
 
-]
+}
