@@ -50,32 +50,21 @@ let battle = (attacker, defender, ability) => {
 
 let lootDrop = (gameItems, lvl) => {
 
-    let common = [];
-    let uncommon = [];
-    let rare = [];
-    let epic = [];
-    let legendary = [];
+    console.log(gameItems);
 
-    //! this will look at every item in gameItems
-    for(let item in gameItems){
-        console.log(item)
+    //! this will look at every ele in gameItems
+    gameItems.forEach((ele) => {
 
-        if(item.rarity == 'common') common.push(item);
-        if(item.rarity == 'uncommon') common.push(item);
-        if(item.rarity == 'rare') common.push(item);
-        if(item.rarity == 'epic') common.push(item);
-        if(item.rarity == 'legendary') common.push(item);
+        if(gameItems.hasOwnProperty(ele)){
+            // console.log(ele);
+            // if(ele['rarity'] == 'common' )common.push(ele);
+            // if(ele['rarity'] == 'uncommon') uncommon.push(ele);
+            // if(ele['rarity'] == 'rare') rare.push(ele);
+            // if(ele['rarity'] == 'epic') epic.push(ele);
+            // if(ele['rarity'] == 'legendary') legendary.push(ele);
+        }
+    })
 
-    }
-
-    if(lvl <= 10){
-
-    }
-    console.log(common);
-    console.log(uncommon);
-    console.log(rare);
-    console.log(epic);
-    console.log(legendary);
 }
 
 lootDrop(gameItems, 3)
