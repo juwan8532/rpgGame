@@ -44,25 +44,19 @@ let battle = (attacker, defender, ability) => {
 
     return damage;
 }
-
 // console.log(gameItems);
-
 //!_________________________________________________________________________________________________
 //! below will be the random loot drop function
 
 let lootDrop = (gameItems, lvl) => {
-
     // console.log(gameItems);
     let dropsArr = [];
-
-//!_______________________________________________________________________________________________________________________
-//! now to calculate the actual drop
-
     let drops = (dropsArr, lvl) => {
 
         let droppedNum = 0;
         let dropped = [];
-
+//!_______________________________________________________________________________________________________________________
+//! now to calculate the actual drop
         for(let i = 0; i < dropsArr.length; i++){
 
             if(dropsArr[i]['rarity'] === 'common' &&
@@ -89,18 +83,21 @@ let lootDrop = (gameItems, lvl) => {
                 dropped.push(dropsArr[i]);
             }
 
-            if(droppedNum === 2) return dropped;
+            if(droppedNum === 2) break;
         }
 
-        return dropped;
-    }
+        //! adds dropped to players items/inventory
+        for(let i = 0; i < dropped.length; i++){
+            hero['items'] = dropped[i];
+        }
 
-
+    }//? end of drops()
 //!_______________________________________________________________________________________________________________________
     //! this will look at every ele in gameItems
     for(let ele in gameItems){
         if(lvl <= 15 && (gameItems[ele]['rarity'] === 'common'
                      || gameItems[ele]['rarity'] === 'uncommon')){
+
             dropsArr.push(gameItems[ele]);
         } //? common and uncommon if()
 
@@ -135,5 +132,6 @@ let lootDrop = (gameItems, lvl) => {
 } //! end of lootDrop()
 
 lootDrop(gameItems, 3)
+console.log(hero)
 // console.log(battle(monster, hero, monster.abilities.bite))
 // console.log(battle(hero, monster, hero.abilities.basic))
