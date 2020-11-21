@@ -88,9 +88,9 @@ let lootDrop = (gameItems, lvl) => {
 
         //! adds dropped to players items/inventory
         for(let i = 0; i < dropped.length; i++){
-            hero['items'] = dropped[i];
+            hero['items'][dropped[i]['name']] = dropped[i];
         }
-
+    console.log(dropped)
     }//? end of drops()
 //!_______________________________________________________________________________________________________________________
     //! this will look at every ele in gameItems
@@ -120,18 +120,25 @@ let lootDrop = (gameItems, lvl) => {
         } //?epic and legendary if()
     }
 
-
-
 //!!!!!!!!!!!!!!!!!!!!!for testing purposes only!!!!!!!!!!!!!!!!!!!!!!!
 //! will test loot drop function and rate
     // setInterval(function(){
-    //     console.log(drops(dropsArr, lvl));
-    // }, 2000)
+    //     drops(dropsArr, lvl);
+    //     console.log(hero)
+    // }, 3000)
 
     drops(dropsArr, lvl)
+    lvlUp(hero);
 } //! end of lootDrop()
 
-lootDrop(gameItems, 3)
 console.log(hero)
+//!______________________________________________________________________________________________________
+
+let lvlUp = (hero) => {
+
+}
+
+lootDrop(gameItems, 3)
+// console.log(hero)
 // console.log(battle(monster, hero, monster.abilities.bite))
 // console.log(battle(hero, monster, hero.abilities.basic))
