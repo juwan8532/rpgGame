@@ -133,9 +133,51 @@ let lootDrop = (gameItems, lvl) => {
 
 console.log(hero)
 //!______________________________________________________________________________________________________
+//! the level up system
+
 
 let lvlUp = (hero) => {
+    let levelUp;
 
+    if(hero.lvl <= 10){
+        levelUp = hero.lvl * 100;
+
+        if(levelUp <= hero.experience){
+            hero.lvl ++;
+        }
+    }
+
+    else if(hero.lvl <= 20){
+        levelUp = hero.lvl * 175;
+
+        if(levelUp <= hero.experience){
+            hero.lvl ++;
+        }
+    }
+
+    else if(hero.lvl <= 35){
+        levelUp = hero.lvl * 245;
+
+        if(levelUp <= hero.experience){
+            hero.lvl ++;
+        }
+    }
+
+    else if(hero.lvl <= 50){
+        levelUp = hero.lvl * 275;
+
+        if(levelUp <= hero.experience){
+            hero.lvl ++;
+        }
+    }
+
+    else if(hero.lvl <= 60){
+        levelUp = hero.lvl * 360;
+
+        if(levelUp <= hero.experience){
+            hero.lvl ++;
+        }
+    }
 }
 
 lootDrop(gameItems, 3)
