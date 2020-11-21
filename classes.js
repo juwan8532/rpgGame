@@ -113,13 +113,21 @@ export class Player extends Character{
         this.lvl = 3;
         this.health = 125;
         this.experience = 0;
-        this.items = {}
+        this.items = {};
     }
 }
+
+//* loot levels
+//* common
+//* uncommon
+//* rare
+//* epic
+//* legendary
 
 export let gameItems = {
 
     blue_nova: {
+        name:'Blue Nova',
         intellect: 5,
         luck: 2,
         toughness:2,
@@ -127,6 +135,7 @@ export let gameItems = {
     },
 
     goblins_glaive:{
+        name:'Goblins Glaive',
         intellect: 1,
         luck: 3,
         toughness:4,
@@ -134,6 +143,7 @@ export let gameItems = {
     },
 
     spectres_hammer:{
+        name:'Spectres Hammer',
         intellect: 4,
         luck: 2,
         toughness:1,
@@ -141,6 +151,7 @@ export let gameItems = {
     },
 
     soul_sword:{
+        name:'Soul Sword',
         intellect: 5,
         luck: 5,
         toughness:3,
@@ -148,6 +159,7 @@ export let gameItems = {
     },
 
     warhammer: {
+        name:'Warhammer',
         intellect: 1,
         luck: 2,
         toughness:10,
@@ -155,6 +167,7 @@ export let gameItems = {
     },
 
     golden_cup: {
+        name:'Golden Cup',
         intellect: 1,
         luck: 10,
         toughness:2,
