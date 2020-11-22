@@ -172,6 +172,61 @@ export let gameItems = {
         luck: 10,
         toughness:2,
         rarity:'uncommon'
-    }
+    },
 
+    great_axe: {
+        name:'Great Axe',
+        intellect: 5,
+        luck: 5,
+        toughness:10,
+        rarity:'rare'
+    },
+
+    blood_stone: {
+        name:'Blood Stone',
+        intellect: 12,
+        luck: 6,
+        toughness:2,
+        rarity:'rare'
+    },
+
+    thors_hammer: {
+        name:'Thors Hammer',
+        intellect: 10,
+        luck: 8,
+        toughness:12,
+        rarity:'epic'
+    },
+
+    kings_sword: {
+        name:'Kings Sword',
+        intellect: 10,
+        luck: 2,
+        toughness:18,
+        rarity:'epic'
+    },
+
+    souls_talisman: {
+        name:'Souls Talisman',
+        intellect: 18,
+        luck: 10,
+        toughness:2,
+        rarity:'epic'
+    },
+
+    nine_lives: {
+        name:'Nine Lives',
+        intellect: 10,
+        luck: 0,
+        toughness:50,
+        rarity:'legendary'
+    },
+
+    thunderwave: {
+        name:'Thunderwave',
+        intellect: 20,
+        luck: 20,
+        toughness:20,
+        rarity:'legendary'
+    }
 }
