@@ -144,6 +144,11 @@ let lvlUp = (hero) => {
 
         if(levelUp <= hero.experience){
             hero.lvl ++;
+            hero.health += 5;
+            hero.intellect ++;
+            hero.luck ++;
+            hero.toughness ++;
+            hero.experience = 0;
         }
     }
 
@@ -152,6 +157,11 @@ let lvlUp = (hero) => {
 
         if(levelUp <= hero.experience){
             hero.lvl ++;
+            hero.health += 5;
+            hero.intellect ++;
+            hero.luck ++;
+            hero.toughness ++;
+            hero.experience = 0;
         }
     }
 
@@ -160,6 +170,11 @@ let lvlUp = (hero) => {
 
         if(levelUp <= hero.experience){
             hero.lvl ++;
+            hero.health += 5;
+            hero.intellect ++;
+            hero.luck ++;
+            hero.toughness ++;
+            hero.experience = 0;
         }
     }
 
@@ -168,6 +183,11 @@ let lvlUp = (hero) => {
 
         if(levelUp <= hero.experience){
             hero.lvl ++;
+            hero.health += 5;
+            hero.intellect ++;
+            hero.luck ++;
+            hero.toughness ++;
+            hero.experience = 0;
         }
     }
 
@@ -176,6 +196,11 @@ let lvlUp = (hero) => {
 
         if(levelUp <= hero.experience){
             hero.lvl ++;
+            hero.health += 5;
+            hero.intellect ++;
+            hero.luck ++;
+            hero.toughness ++;
+            hero.experience = 0;
         }
     }
 }
