@@ -6,6 +6,7 @@ export class Character {
         this.health = 70;
         // this.offense = 0;
         // this.defense = 0;
+        this.weapon = null;
         this.assignPower(this.type)
     }
 

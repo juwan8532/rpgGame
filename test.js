@@ -4,7 +4,6 @@ import { gameItems } from './classes.js';
 
 let hero = new Player('juwan', 'Mage');
 let monster = new Character('evil', 'beast')
-
 // console.log(hero);
 // console.log(monster);
 
@@ -131,13 +130,14 @@ let lootDrop = (gameItems, lvl) => {
     lvlUp(hero);
 } //! end of lootDrop()
 
-console.log(hero)
+
 //!______________________________________________________________________________________________________
 //! the level up system
 
 
 let lvlUp = (hero) => {
     let levelUp;
+    hero.experience = 9000;
 
     if(hero.lvl <= 10){
         levelUp = hero.lvl * 100;
@@ -205,7 +205,8 @@ let lvlUp = (hero) => {
     }
 }
 
+
 lootDrop(gameItems, 3)
-// console.log(hero)
+console.log(hero)
 // console.log(battle(monster, hero, monster.abilities.bite))
 // console.log(battle(hero, monster, hero.abilities.basic))
