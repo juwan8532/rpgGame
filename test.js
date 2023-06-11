@@ -92,7 +92,7 @@ let lootDrop = (gameItems, lvl) => {
     console.log(dropped)
     }//? end of drops()
 //!_______________________________________________________________________________________________________________________
-    //! this will look at every ele in gameItems
+    //! this will look at every element in gameItems
     for(let ele in gameItems){
         if(lvl <= 15 && (gameItems[ele]['rarity'] === 'common'
                      || gameItems[ele]['rarity'] === 'uncommon')){
