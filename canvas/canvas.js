@@ -25,10 +25,15 @@ for(i = 0; i < mapArray.length; i++){
 
         if(mapArray[i][j] == 0){
             context.drawImage(grass, posX, posY, 32,32)
+            console.log('grass at ' + mapArray[i][j])
         }
         if(mapArray[i][j] == 1){
             context.drawImage(sand, posX, posY, 32,32)
+            console.log('sand at ' + mapArray[i][j])
         }
-    }
-}
+        posX+=32;
 
+    }
+    posX = 0;
+    posY+=32;
+}
